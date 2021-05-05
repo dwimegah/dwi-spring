@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="eng"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <div th:fragment="header">
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="/list"><b>SALES APP</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav mr-auto">
+			    	<li class="nav-item" th:classappend="${active eq 'cust'} ? 'active' : ''">
+			     		<a class="nav-link" href="/list"><b>CUSTOMER</b> <span class="sr-only">(current)</span></a>
+			      	</li>
+			      	<li class="nav-item" th:classappend="${active eq 'prod'} ? 'active' : ''">
+			        	<a class="nav-link" href="/list-product"><b>PRODUCT</b></a>
+			      	</li>
+			      	<li class="nav-item" th:classappend="${active eq 'logout'} ? 'active' : ''">
+			        	<a class="nav-link" href="/logout"><b>LOGOUT</b></a>
+			      	</li>
+			   	</ul>
+			</div>
+        </nav><br>
+    </div>
+</html>
