@@ -37,6 +37,7 @@ public class ProductController {
         } else {
             products = productRepository.findAll(pageable);
         }
+	#test
         
         model.addAttribute("active", "prod");
         model.addAttribute("products", products);
