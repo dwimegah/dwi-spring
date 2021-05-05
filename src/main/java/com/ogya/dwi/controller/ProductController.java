@@ -39,6 +39,7 @@ public class ProductController {
         }
 	#test
 	#test3
+	#test2
         
         model.addAttribute("active", "prod");
         model.addAttribute("products", products);
